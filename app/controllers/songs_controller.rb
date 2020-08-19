@@ -9,6 +9,7 @@ class SongsController < ApplicationController
 
     def create 
         @song = Song.new(post_params)
+        # binding.pry
         if @song.valid?
            @song.save 
         redirect_to song_path(@song)
